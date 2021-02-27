@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Project Management</title>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="profile_container">
+        <figure class="profile">
+          <img
+            src="https://avatars.githubusercontent.com/u/31545128?v=4"
+            alt="Profile image"
+          />
+          <figcaption class="profile_data">
+            <h2 class="profile_data_name">Danilo</h2>
+            <p class="profile_data_position">Lead Designer</p>
+            <div class="status">
+              <span></span>
+              <span>Online</span>
+            </div>
+          </figcaption>
+        </figure>
+
+        <ul class="profile_list">
+          <li class="profile_list_item">
+            <span>
+              <i class="fa fa-edit"></i>
+            </span>
+            Work
+          </li>
+          <li class="profile_list_item">
+            <span>
+              <i class="fa fa-balance-scale-right"></i>
+            </span>
+            Plan
+          </li>
+          <li class="profile_list_item">
+            <span>
+              <i class="fa fa-chart-bar"></i>
+            </span>
+            Stats
+          </li>
+          <li class="profile_list_item">
+            <span>
+              <i class="far fa-file"></i>
+            </span>
+            Documents
+          </li>
+          <li class="profile_list_item">
+            <span>
+              <i class="far fa-user"></i>
+            </span>
+            User
+          </li>
+          <li class="profile_list_item">
+            <span>
+              <i class="fas fa-sliders-h"></i>
+            </span>
+            Settings
+          </li>
+        </ul>
+
+        <button class="logout_button">Log out</button>
+      </aside>
+      <main class="dashboard">
+        <header>
+          <label class="dashboard_header_left_icons">
+            <span>
+              <i class="far fa-envelope"></i>
+            </span>
+            <span>
+              <i class="far fa-bell"></i>
+            </span>
+          </label>
+
+          <div class="input-search">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Search projects" />
+          </div>
+
+          <span class="menu-icon">
+            <i class="fas fa-bars"></i>
+          </span>
+        </header>
+
+        <section class="project_informations">
+          <div>
+            <span>
+              <h1>Project Title</h1>
+              <p>Short description</p>
+            </span>
+
+            <span>
+              <p>Due Date</p>
+              <p>Mon, Aug 28, 2017</p>
+            </span>
+          </div>
+
+          <div>
+            <span>
+              <img src="https://avatars.githubusercontent.com/u/31545128?v=4" />
+            </span>
+            <span>
+              <img src="https://avatars.githubusercontent.com/u/31545128?v=4" />
+            </span>
+            <span> + </span>
+          </div>
+        </section>
+
+        <section class="projects_progess_container">
+          <header>
+              <button class="new_ticket_button">Create new ticket</button>
+              <button class="add_column_button">+<span>Add column</span></button>
+          </header>
+        
+          
+          <div class="projects_in_progress">
+              <div class="backlog">
+                  <div class="card_project">
+                    <h2>Task Name</h2>
+                    <label>
+                        Design
+                        <span></span>
+                    </label>
+                    <p>Description</p>
+                    <footer>
+                        <span>
+                            <img src="https://avatars.githubusercontent.com/u/31545128?v=4" alt="">
+                            <label>09/02/17</label>
+                        </span>
+                    </footer>
+                  </div>
+
+                  <div class="card_project">
+                    <h2>Task Name</h2>
+                    <label>
+                        Design
+                        <span></span>
+                    </label>
+                    <p>Description</p>
+                    <footer>
+                        <span>
+                            <img src="https://avatars.githubusercontent.com/u/31545128?v=4" alt="">
+                            <label>09/02/17</label>
+                        </span>
+                    </footer>
+                  </div>
+              </div>
+              <div class="in_progress"></div>
+              <div class="review"></div>
+          </div>
+
+        </section>
+        
+      </main>
+    </div>
+  </body>
+</html>

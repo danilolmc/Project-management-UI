@@ -1,0 +1,329 @@
+:root {
+  --main-background: #f7f7f7;
+  --title: #121212;
+  --subtitle: #a7a09e;
+  --very-lught-green: #3beab0;
+  --pink: #fb95aa;
+  --medium-pink: #f96583;
+  --white: #ffffff;
+  --light-gray: #d6d6d6;
+}
+
+* {
+  border: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 18% 82%;
+  grid-template-areas: 'aside main';
+}
+
+.container .profile_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4rem 6rem;
+  grid-area: aside;
+}
+
+.profile_container .profile_data {
+    line-height: 1.7rem;
+    margin: 2rem 0;
+}
+
+.profile_container .profile_data .profile_data_position {
+    color: var(--subtitle);
+    font-size: 0.9rem;
+}
+
+.profile_container .profile_data .status {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    margin-top: 0.4rem;
+}
+
+.profile_container .profile_data .status span:first-child {
+    border-radius: 50%;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: var(--very-lught-green);
+}
+
+.container .profile_container .profile img {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 180px;
+    box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile_container .profile_list {
+    list-style: none;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 5rem;
+    row-gap: 2rem;
+}
+
+.profile_list .profile_list_item {
+    cursor: pointer;
+    width: 100%;
+}
+
+.profile_list .profile_list_item,
+.profile_list_item span {
+    transition: all 0.5s ease;
+    color: var(--subtitle);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.profile_list_item span {
+    margin-right: 1rem;
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+
+.profile_list .profile_list_item:hover,
+.profile_list_item:hover span {
+    transition: all 0.5s ease;
+    cursor: context-menu;
+    color: var(--pink);
+}
+
+.profile_container .logout_button {
+    background: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--subtitle);
+}
+
+.container .dashboard {
+    background: var(--main-background);
+    padding: 3rem 0rem;
+    grid-area: main;
+}
+
+.dashboard header,
+.project_informations,
+.projects_in_progress {
+    padding: 0 5rem;
+}
+
+.container .dashboard > header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.dashboard .dashboard_header_left_icons {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.dashboard .dashboard_header_left_icons span {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-content: center;
+  background: var(--white);
+  box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.3rem;
+  color: var(--subtitle);
+}
+
+.dashboard .input-search {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  height: 2.5rem;
+  flex: 1;
+  transform: translateX(-3rem);
+  max-width: 600px;
+  padding: 0 2rem;
+  background: var(--white);
+}
+
+.input-search input {
+  flex: 1;
+  height: 100%;
+  color: var(--subtitle);
+}
+
+.input-search input:focus {
+  outline-color: transparent;
+}
+
+.input-search,
+input::placeholder {
+  color: var(--light-gray);
+}
+
+.dashboard > header .menu-icon {
+  font-size: 1.4rem;
+}
+
+.project_informations {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  margin-top: 5rem;
+  height: 10rem;
+  border-color: var(--light-gray);
+}
+
+.project_informations > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 3rem;
+}
+
+.project_informations > div:first-child span:first-child {
+  border-right: 1px solid var(--light-gray);
+  line-height: 1.8rem;
+  padding-right: 2rem;
+}
+
+.project_informations > div:first-child span:first-child h1 {
+  font-size: 1.5rem;
+}
+
+.project_informations > div:first-child span:first-child p {
+  font-size: 0.9rem;
+  color: var(--subtitle);
+}
+
+.project_informations > div:first-child span:last-child p:first-child {
+  text-transform: uppercase;
+  color: var(--subtitle);
+  font-weight: 600;
+  line-height: 1.8rem;
+  font-size: 1rem;
+}
+
+.project_informations > div:first-child span:last-child p:last-child {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.project_informations > div:last-child {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.project_informations > div:last-child span {
+  display: grid;
+  place-content: center;
+  width: 3.1rem;
+  height: 3.1rem;
+  background-color: #e9e9e9;
+  border-radius: 50%;
+  overflow: hidden;
+  font-size: 1.5rem;
+  color: var(--subtitle);
+  font-weight: 300;
+}
+
+.project_informations > div:last-child span img {
+  width: 100%;
+}
+
+.projects_progess_container {
+  padding: 2rem 0;
+  /* border: 1px solid red; */
+}
+
+.projects_progess_container header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.projects_progess_container button {
+  margin-left: 1.8rem;
+  background: none;
+}
+
+.projects_progess_container .new_ticket_button {
+  background: var(--medium-pink);
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--white);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  box-shadow: 2px 1px 10px #f96583;
+  padding: 0.3rem 1.3rem;
+  transition: .5s ease;
+}
+
+.projects_progess_container .new_ticket_button:hover {
+    filter: brightness(110%);
+}
+
+.projects_progess_container .add_column_button {
+  color: var(--subtitle);
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.projects_progess_container .add_column_button span {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+
+.projects_progess_container .projects_in_progress{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 4rem;
+    margin-top: 3rem;
+}
+
+.projects_progess_container .projects_in_progress > div{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+}
+
+
+.projects_in_progress .card_project{
+    background: var(--white);
+    padding: 2rem;
+}
+
+.card_project > label{
+    color: var(--subtitle);
+}
+
+.card_project > label{
+    color: var(--subtitle);
+}
