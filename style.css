@@ -3,6 +3,7 @@
   --title: #121212;
   --subtitle: #a7a09e;
   --very-lught-green: #3beab0;
+  --cyan: #6ae2f0;
   --pink: #fb95aa;
   --medium-pink: #f96583;
   --white: #ffffff;
@@ -29,7 +30,7 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: 18% 82%;
-  grid-template-areas: 'aside main';
+  grid-template-areas: "aside main";
 }
 
 .container .profile_container {
@@ -42,103 +43,103 @@ body {
 }
 
 .profile_container .profile_data {
-    line-height: 1.7rem;
-    margin: 2rem 0;
+  line-height: 1.7rem;
+  margin: 2rem 0;
 }
 
 .profile_container .profile_data .profile_data_position {
-    color: var(--subtitle);
-    font-size: 0.9rem;
+  color: var(--subtitle);
+  font-size: 0.9rem;
 }
 
 .profile_container .profile_data .status {
-    display: flex;
-    align-items: center;
-    column-gap: 0.5rem;
-    margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin-top: 0.4rem;
 }
 
 .profile_container .profile_data .status span:first-child {
-    border-radius: 50%;
-    width: 0.8rem;
-    height: 0.8rem;
-    background: var(--very-lught-green);
+  border-radius: 50%;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: var(--very-lught-green);
 }
 
 .container .profile_container .profile img {
-    border-radius: 50%;
-    width: 100%;
-    max-width: 180px;
-    box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 100%;
+  max-width: 180px;
+  box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .profile_container .profile_list {
-    list-style: none;
-    flex: 1;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-top: 5rem;
-    row-gap: 2rem;
+  list-style: none;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 5rem;
+  row-gap: 2rem;
 }
 
 .profile_list .profile_list_item {
-    cursor: pointer;
-    width: 100%;
+  cursor: pointer;
+  width: 100%;
 }
 
 .profile_list .profile_list_item,
 .profile_list_item span {
-    transition: all 0.5s ease;
-    color: var(--subtitle);
-    font-weight: 600;
-    font-size: 1rem;
+  transition: all 0.5s ease;
+  color: var(--subtitle);
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .profile_list_item span {
-    margin-right: 1rem;
-    display: inline-block;
-    width: 20px;
-    text-align: center;
+  margin-right: 1rem;
+  display: inline-block;
+  width: 20px;
+  text-align: center;
 }
 
 .profile_list .profile_list_item:hover,
 .profile_list_item:hover span {
-    transition: all 0.5s ease;
-    cursor: context-menu;
-    color: var(--pink);
+  transition: all 0.5s ease;
+  cursor: context-menu;
+  color: var(--pink);
 }
 
 .profile_container .logout_button {
-    background: none;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--subtitle);
+  background: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--subtitle);
 }
 
 .container .dashboard {
-    background: var(--main-background);
-    padding: 3rem 0rem;
-    grid-area: main;
+  background: var(--main-background);
+  padding: 3rem 0rem;
+  grid-area: main;
 }
 
-.dashboard header,
+.dashboard > header,
 .project_informations,
-.projects_in_progress {
-    padding: 0 5rem;
+.projects_progess_container {
+  padding: 0 5rem;
 }
 
 .container .dashboard > header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .dashboard .dashboard_header_left_icons {
-    display: flex;
-    column-gap: 1rem;
+  display: flex;
+  column-gap: 1rem;
 }
 
 .dashboard .dashboard_header_left_icons span {
@@ -254,8 +255,7 @@ input::placeholder {
 }
 
 .projects_progess_container {
-  padding: 2rem 0;
-  /* border: 1px solid red; */
+  padding-top: 2rem;
 }
 
 .projects_progess_container header {
@@ -279,11 +279,11 @@ input::placeholder {
   letter-spacing: 2px;
   box-shadow: 2px 1px 10px #f96583;
   padding: 0.3rem 1.3rem;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .projects_progess_container .new_ticket_button:hover {
-    filter: brightness(110%);
+  filter: brightness(110%);
 }
 
 .projects_progess_container .add_column_button {
@@ -300,30 +300,101 @@ input::placeholder {
   font-weight: 600;
 }
 
-.projects_progess_container .projects_in_progress{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 4rem;
-    margin-top: 3rem;
+.projects_progess_container .projects_in_progress {
+  display: grid;
+  grid-template-columns: repeat(3,28%);
+  column-gap: 3rem;
+  margin-top: 3rem;
 }
 
-.projects_progess_container .projects_in_progress > div{
-    border: 1px solid red;
+.projects_progess_container .projects_in_progress div header{
+
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.projects_in_progress div header span{
+    cursor: pointer;
+}
+
+.projects_in_progress div header span i{
+    font-size: 1rem;
+    margin: 0 .9rem;
+    color: var(--subtitle);
+}
+
+
+.cards_container{
+    
     display: flex;
     flex-direction: column;
-    row-gap: 5rem;
+    row-gap: 4rem;
+}
+
+.projects_in_progress .card_project {
+  background: var(--white);
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+  transition: .5s ease;
+}
+
+.projects_in_progress .card_project:hover {
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
 }
 
 
-.projects_in_progress .card_project{
-    background: var(--white);
-    padding: 2rem;
+
+.card_project label,
+p {
+  color: var(--subtitle);
 }
 
-.card_project > label{
-    color: var(--subtitle);
+.card_project_content {
+  flex: 1;
 }
 
-.card_project > label{
-    color: var(--subtitle);
+.card_project_content h2 {
+  font-size: 1.3rem;
+}
+
+.card_project_content label {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.card_project_content label span {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--cyan);
+}
+
+.card_project footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.card_project footer span:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1rem;
+}
+
+.card_project footer img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
 }
