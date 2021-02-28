@@ -348,7 +348,7 @@ input::placeholder {
 
 .projects_in_progress .card_project:hover {
 
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.05);
 }
 
 
