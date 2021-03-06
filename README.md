@@ -2,7 +2,7 @@
 
 UI built with HTML and CSS for practicing
 
-<img src="management.jpg"/>
+<img src="management.JPG"/>
 
 
 ## Running project
